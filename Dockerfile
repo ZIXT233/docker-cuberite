@@ -26,10 +26,6 @@ RUN  cd minecraft && cd cuberite && mkdir build-cuberite && cd build-cuberite \
 RUN mv "$C_HOME"/cuberite/Server "$C_HOME"/Server
 
 COPY configs/ "$C_HOME"/Server
-COPY scripts/entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
-
-ENTRYPOINT ["/entrypoint.sh"]
 
 CMD ["Cuberite"]
 
