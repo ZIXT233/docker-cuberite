@@ -18,14 +18,14 @@ RUN mkdir /minecraft \
 
 RUN pwd
 # Build
-RUN  cd minecraft && cd cuberite && mkdir build-cuberite && cd build-cuberite \
+RUN  cd /minecraft && cd cuberite && mkdir build-cuberite && cd build-cuberite \
   && cmake .. -DCMAKE_BUILD_TYPE=Release \
   && make -j`nproc` \
   && cd ../Server
 
-RUN mv "$C_HOME"/cuberite/Server "$C_HOME"/Server
+RUN mv minecraft/cuberite/Server minecraft/Server
 
-COPY configs/ "$C_HOME"/Server
+COPY configs/ minecraft/Server
 
 CMD ["Cuberite"]
 
