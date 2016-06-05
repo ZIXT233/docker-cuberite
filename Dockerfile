@@ -17,7 +17,7 @@ RUN git clone --recursive https://github.com/cuberite/cuberite.git \
 # Build
 RUN  cd cuberite && mkdir build-cuberite && cd build-cuberite \
   && cmake .. -DCMAKE_BUILD_TYPE=Release \
-  && make -j \
+  && make -j 2\
   && cd ../Server
 
 COPY configs/ cuberite/Server
