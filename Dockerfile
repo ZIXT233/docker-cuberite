@@ -26,4 +26,4 @@ WORKDIR cuberite/Server
 CMD ["./Cuberite"]
 
 EXPOSE 25565 8080
-VOLUME /cuberite
+VOLUME ["/cuberite"]
