@@ -5,7 +5,7 @@ FROM debian:latest
 RUN apt-get update \
   && DEBIAN_FRONTEND=noninteractive \
 	&& apt-get install --no-install-recommends --yes \
-		clang git cmake make\
+		ca-certificates clang git cmake make\
 	&& apt-get clean \
 	&& rm -rf /var/lib/apt/lists/
 
