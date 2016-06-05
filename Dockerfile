@@ -12,7 +12,7 @@ RUN apt-get update \
 # Cuberite
 RUN mkdir /minecraft \
 	&& cd /minecraft \
-	&& git clone https://github.com/cuberite/cuberite.git \
+	&& git clone --recursive https://github.com/cuberite/cuberite.git \
   && cd cuberite \
   && pwd
 
