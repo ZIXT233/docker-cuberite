@@ -23,6 +23,8 @@ RUN  cd cuberite && mkdir build-cuberite && cd build-cuberite \
 COPY configs/ /cuberite/Server
 COPY scripts/start.sh /cuberite/Server
 
+RUN chmod +x /cuberite/Server/start.sh
+
 WORKDIR /cuberite/Server
 CMD ["./start.sh"]
 
