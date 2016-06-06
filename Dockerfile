@@ -20,10 +20,10 @@ RUN  cd cuberite && mkdir build-cuberite && cd build-cuberite \
   && make -j 2\
   && cd ../Server
 
-COPY configs/ cuberite/Server
-COPY scripts/start.sh /cuberite/start.sh
+COPY configs/ /cuberite/Server
+COPY scripts/start.sh /cuberite/Server
 
-WORKDIR /cuberite
+WORKDIR /cuberite/Server
 CMD ["start.sh"]
 
 EXPOSE 25565 8080
