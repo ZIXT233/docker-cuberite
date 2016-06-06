@@ -21,9 +21,10 @@ RUN  cd cuberite && mkdir build-cuberite && cd build-cuberite \
   && cd ../Server
 
 COPY configs/ cuberite/Server
-COPY scripts/start.sh /start.sh
+COPY scripts/start.sh /cuberite/start.sh
 
-CMD ["/start.sh"]
+WORKDIR /cuberite
+CMD ["start.sh"]
 
 EXPOSE 25565 8080
 VOLUME ["/cuberite"]
