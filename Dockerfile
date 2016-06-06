@@ -24,7 +24,7 @@ COPY configs/ /cuberite/Server
 COPY scripts/start.sh /cuberite/Server
 
 WORKDIR /cuberite/Server
-CMD ["start.sh"]
+CMD ["./start.sh"]
 
 EXPOSE 25565 8080
 VOLUME ["/cuberite"]
